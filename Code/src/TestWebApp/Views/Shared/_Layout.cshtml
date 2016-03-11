@@ -39,31 +39,84 @@
                 </div>
             </div>
         </div>
-        <div class="container body-content">
-            @RenderBody()
-            <hr />
-            <footer>
-                <p>&copy; 2016 - TestWebApp</p>
-            </footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-2 col-md-2 sidebar">
+                    <div class="panel-group" id="collapse">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#collapse" href="#collapse-one">
+                                        Прайс-листы
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse-one" class="panel-collapse collapse in">
+                                <div class="panel-body">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#collapse" href="#collapse-two">
+                                        Заказ
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse-two" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Morbi eget libero quis metus consectetur semper.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a data-toggle="collapse" data-parent="#collapse" href="#collapse-three">
+                                        Склад
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="collapse-three" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    Suspendisse ullamcorper massa eget eleifend iaculis.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-9">
+                    <div class="container body-content">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
         </div>
+        <hr />
+                <footer>
+                    <p>&copy; 2016 - TestWebApp</p>
+                </footer>
+           
 
-        <environment names="Development">
-            <script src="~/lib/jquery/dist/jquery.js"></script>
-            <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/js/site.js" asp-append-version="true"></script>
-        </environment>
-        <environment names="Staging,Production">
-            <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
-                    asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                    asp-fallback-test="window.jQuery">
-            </script>
-            <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
-                    asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                    asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
-            </script>
-            <script src="~/js/site.min.js" asp-append-version="true"></script>
-        </environment>
+            <environment names="Development">
+                <script src="~/lib/jquery/dist/jquery.js"></script>
+                <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+                <script src="~/js/site.js" asp-append-version="true"></script>
+            </environment>
+            <environment names="Staging,Production">
+                <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
+                        asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                        asp-fallback-test="window.jQuery">
+                </script>
+                <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/bootstrap.min.js"
+                        asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                        asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
+                </script>
+                <script src="~/js/site.min.js" asp-append-version="true"></script>
+            </environment>
 
-        @RenderSection("scripts", required: false)
-    </body>
+            @RenderSection("scripts", required: false)
+</body>
 </html>
